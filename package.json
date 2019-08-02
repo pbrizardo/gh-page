@@ -1,5 +1,7 @@
 {
   "name": "paul",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "gh-pages": "^2.1.0",
     "bootstrap": "3",
