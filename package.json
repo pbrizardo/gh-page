@@ -1,0 +1,29 @@
+{
+  "name": "paul",
+  "dependencies": {
+    "gh-pages": "^2.1.0",
+    "bootstrap": "3",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-scripts": "2.0.4"
+  },
+  "homepage": "https://pbrizardo.github.io",
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
+    "build": "reqact-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "estlintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
