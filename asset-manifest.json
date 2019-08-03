@@ -1,14 +1,15 @@
 {
-  "main.css": "/gh-page/static/css/main.ce2ea531.chunk.css",
-  "main.js": "/gh-page/static/js/main.75b00f25.chunk.js",
-  "main.js.map": "/gh-page/static/js/main.75b00f25.chunk.js.map",
-  "static/js/1.01aa792c.chunk.js": "/gh-page/static/js/1.01aa792c.chunk.js",
-  "static/js/1.01aa792c.chunk.js.map": "/gh-page/static/js/1.01aa792c.chunk.js.map",
+  "main.css": "/gh-page/static/css/main.d3ed1ce0.chunk.css",
+  "main.js": "/gh-page/static/js/main.2753c598.chunk.js",
+  "main.js.map": "/gh-page/static/js/main.2753c598.chunk.js.map",
+  "static/js/1.9bd188b0.chunk.js": "/gh-page/static/js/1.9bd188b0.chunk.js",
+  "static/js/1.9bd188b0.chunk.js.map": "/gh-page/static/js/1.9bd188b0.chunk.js.map",
   "runtime~main.js": "/gh-page/static/js/runtime~main.857bc51d.js",
   "runtime~main.js.map": "/gh-page/static/js/runtime~main.857bc51d.js.map",
-  "static/media/beach_bg.jpg": "/gh-page/static/media/beach_bg.86e35d58.jpg",
-  "static/css/main.ce2ea531.chunk.css.map": "/gh-page/static/css/main.ce2ea531.chunk.css.map",
+  "static/css/main.d3ed1ce0.chunk.css.map": "/gh-page/static/css/main.d3ed1ce0.chunk.css.map",
+  "static/media/beach_bg.jpg": "/gh-page/static/media/beach_bg.04e0d834.jpg",
+  "static/media/blizzcon_bg.jpg": "/gh-page/static/media/blizzcon_bg.ec09236c.jpg",
   "index.html": "/gh-page/index.html",
-  "precache-manifest.672fed1205b7320df1434827904e813a.js": "/gh-page/precache-manifest.672fed1205b7320df1434827904e813a.js",
+  "precache-manifest.b3851fffc6c70a25c4045ba28550c59a.js": "/gh-page/precache-manifest.b3851fffc6c70a25c4045ba28550c59a.js",
   "service-worker.js": "/gh-page/service-worker.js"
 }
