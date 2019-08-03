@@ -1,17 +1,21 @@
 import React from 'react';
-import Header from './components/Header';
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import Home from './components/Home';
+import { createMuiTheme } from '@material-ui/core/styles';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import './App.css';
+
+const theme = createMuiTheme({
+  typography: {
+    h1: {
+      fontColor: 'white',
+    }
+  }
+});
 
 export default function App() {
   return (
-    <div>
-      <Header />
-      <div className="section">
-        <p>
-          Whatiever you want i have something for that
-        </p>
-      </div>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Home />
+    </ThemeProvider>
   )
 }
