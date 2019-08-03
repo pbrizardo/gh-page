@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Fragment>
       <Parallax bgImage={require('../../assets/images/beach_bg.jpg')} strength={700} >
-        <div style={{ height: '500px' }}>
+        <div style={{ height: '550px' }}>
           <Box
             display="flex"
             justifyContent="center"
@@ -19,6 +19,18 @@ export default function Home() {
             <ul>
               <li><Link to="section1" spy={true} smooth={true} duration={500}>Section 1</Link></li>
             </ul>
+          </Box>
+        </div>
+      </Parallax>
+      <Parallax bgImage={require('../../assets/images/blizzcon_bg.jpg')} strength={700} >
+        <div style={{ height: '550px' }}>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            style={{ height: '100%', padding: '16px' }}
+          >
+            <Typography variant="h1">Blizzcon</Typography>
           </Box>
         </div>
       </Parallax>
