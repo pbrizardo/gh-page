@@ -1,7 +1,7 @@
 {
   "main.css": "/gh-page/static/css/main.6306aadc.chunk.css",
-  "main.js": "/gh-page/static/js/main.9da5069b.chunk.js",
-  "main.js.map": "/gh-page/static/js/main.9da5069b.chunk.js.map",
+  "main.js": "/gh-page/static/js/main.47364324.chunk.js",
+  "main.js.map": "/gh-page/static/js/main.47364324.chunk.js.map",
   "static/js/1.5bd4a62c.chunk.js": "/gh-page/static/js/1.5bd4a62c.chunk.js",
   "static/js/1.5bd4a62c.chunk.js.map": "/gh-page/static/js/1.5bd4a62c.chunk.js.map",
   "runtime~main.js": "/gh-page/static/js/runtime~main.857bc51d.js",
@@ -10,6 +10,6 @@
   "static/media/blizzcon_bg.jpg": "/gh-page/static/media/blizzcon_bg.ec09236c.jpg",
   "static/media/beach_bg.jpg": "/gh-page/static/media/beach_bg.04e0d834.jpg",
   "index.html": "/gh-page/index.html",
-  "precache-manifest.96450b63022b354e82225b03b57eaf35.js": "/gh-page/precache-manifest.96450b63022b354e82225b03b57eaf35.js",
+  "precache-manifest.850864cd5c8293402e26feddffa23a69.js": "/gh-page/precache-manifest.850864cd5c8293402e26feddffa23a69.js",
   "service-worker.js": "/gh-page/service-worker.js"
 }
