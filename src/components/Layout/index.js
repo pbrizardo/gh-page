@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import Main from '../Main';
 import About from '../About';
 import Projects from '../Projects';
+import Footer from '../Footer';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Main />
       <About /> 
       <Projects /> 
+      <Footer />
     </Fragment>
   )
 }

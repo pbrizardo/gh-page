@@ -7,7 +7,7 @@ import { Element } from 'react-scroll';
 export default function About() {
   return (
     <Element name="aboutme">
-      <Parallax bgImage={require('../../assets/images/blizzcon_bg.jpg')} strength={700} >
+      <Parallax bgImage={require('../../assets/images/bigotree_bg.jpg')} strength={700} >
         <div style={{ height: '550px' }}>
           <Box
             display="flex"

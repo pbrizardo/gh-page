@@ -20,7 +20,7 @@ export default function Projects() {
           >
             <Card>
               <CardContent>
-                <Typography variant="p">
+                <Typography variant="body2" component="p">
                   Something
                 </Typography>
               </CardContent>
