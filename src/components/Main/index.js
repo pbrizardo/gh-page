@@ -43,8 +43,8 @@ const useStyles = makeStyles({
     listStyle: 'none',
   },
   navItems: {
-    paddingLeft: '24px',
-    paddingRight: '24px',
+    paddingLeft: '40px',
+    paddingRight: '40px',
   },
   navLink: {
     display: 'inline-block',
@@ -52,6 +52,12 @@ const useStyles = makeStyles({
     borderRadius: 5,
     border: '2px solid white',
     padding: '16px',
+    cursor: 'pointer',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+
+    '&:hover': {
+      backgroundColor: 'rgba(0,0,0,0.8)',
+    }
   },
   navIcon: {
     fontSize: '88px',
