@@ -29,13 +29,13 @@ export default function Main() {
             <Fade delay={700}>
               <ul className={styles.navigation}>
                 <li className={styles.navItems}>
-                  <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
-                    <Face className={styles.navIcon} />
+                  <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
+                    <Build className={styles.navIcon} />
                   </Link>
                 </li>
                 <li className={styles.navItems}>
-                  <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
-                    <Build className={styles.navIcon} />
+                  <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
+                    <Face className={styles.navIcon} />
                   </Link>
                 </li>
               </ul>

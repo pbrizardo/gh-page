@@ -32,13 +32,13 @@ export default function Header() {
             </Link>
           </ListItem>
           <ListItem>
-            <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
-              <Face />
+            <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
+              <Build />
             </Link>
           </ListItem>
           <ListItem>
-            <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
-              <Build />
+            <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
+              <Face />
             </Link>
           </ListItem>
         </List>
