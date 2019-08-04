@@ -10,6 +10,9 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
   })
 
   const [ scrollingLock, setScrollingLock ] = useState(false);
