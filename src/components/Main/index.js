@@ -13,7 +13,7 @@ export default function Main() {
     <Parallax bgImage={require('../../assets/images/beach_bg.jpg')} strength={700} >
       <div style={{ height: '550px' }}>
         <Box
-          display="flex"
+          display="flex" 
           justifyContent="center"
           alignItems="center"
           style={{ height: '100%', padding: '16px' }}
@@ -21,12 +21,12 @@ export default function Main() {
           <ul className={styles.navigation}>
             <li className={styles.navItems}>
               <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
-                <Face />
+                <Face className={styles.navIcon} />
               </Link>
             </li>
             <li className={styles.navItems}>
               <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
-                <Build />
+                <Build className={styles.navIcon} />
               </Link>
             </li>
           </ul>
@@ -43,13 +43,18 @@ const useStyles = makeStyles({
     listStyle: 'none',
   },
   navItems: {
-
+    paddingLeft: '24px',
+    paddingRight: '24px',
   },
   navLink: {
+    display: 'inline-block',
     color: 'white',
     borderRadius: 5,
-    borderWidth: 5,
-    borderColor: 'white'
+    border: '2px solid white',
+    padding: '16px',
+  },
+  navIcon: {
+    fontSize: '88px',
   }
 
 });
