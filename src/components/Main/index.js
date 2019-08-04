@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 import Box from '@material-ui/core/Box';
-import { Typography, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import { Link } from 'react-scroll';
 import { Face, Build } from '@material-ui/icons';
 
@@ -18,15 +18,17 @@ export default function Main() {
           alignItems="center"
           style={{ height: '100%', padding: '16px' }}
         >
-
-          <Typography variant="h1">Welcome son</Typography>
-          <ul style={styles.mainNav}>
-            <li><Face /></li>
-            <li><Build /></li>
-            <li></li>
-          </ul>
-          <ul>
-            <li><Link to="section1" spy={true} smooth={true} duration={500}>Section 1</Link></li>
+          <ul className={styles.navigation}>
+            <li className={styles.navItems}>
+              <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
+                <Face />
+              </Link>
+            </li>
+            <li className={styles.navItems}>
+              <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
+                <Build />
+              </Link>
+            </li>
           </ul>
         </Box>
       </div>
@@ -35,8 +37,19 @@ export default function Main() {
 }
 
 const useStyles = makeStyles({
-  mainNav: {
+  navigation: {
     display: 'flex',
-    flexDirection: 'row' 
+    flexDirection: 'row', 
+    listStyle: 'none',
+  },
+  navItems: {
+
+  },
+  navLink: {
+    color: 'white',
+    borderRadius: 5,
+    borderWidth: 5,
+    borderColor: 'white'
   }
+
 });
