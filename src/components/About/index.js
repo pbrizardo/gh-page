@@ -1,37 +1,45 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
-import { Typography } from '@material-ui/core';
+
+import { Box, Typography, Container } from '@material-ui/core';
+
 import { Slide } from 'react-reveal';
-import { makeStyles } from '@material-ui/styles';
 import { Element } from 'react-scroll';
+import useCommonStyles from '../../styles/common';
+import { makeStyles } from '@material-ui/styles';
 
 export default function About() {
 
-  const styles = useStyles();
+  const styles = {
+    ...useStyles(),
+    ...useCommonStyles()
+  }
 
   return (
     <Element name="aboutme">
-      <Parallax bgImage={require('../../assets/images/bigotree_bg.jpg')} strength={700} >
-        <div style={{ height: '550px' }}>
-          <Slide left>
-            <Typography className={styles.title} variant="h1">My Profile</Typography>
-          </Slide>
-        </div>
-      </Parallax>
+      <Container className={styles.container}>
+        <Slide left>
+          <Box className={styles.titleContainer}>
+            <Typography className={styles.titleLight} variant="h3">About </Typography>
+            <Typography className={styles.title} variant="h3">Me</Typography>
+          </Box>
+        </Slide>
+        <Box className={styles.aboutContent}>
+          <Typography className={styles.aboutText} variant="h6">
+            Hi there! I'm a Cal Poly Pomona 2013 graduate with a BS degree in Computer Science. 
+          </Typography>
+        </Box>
+      </Container>
     </Element>
   )
 }
 
 const useStyles = makeStyles({
-  title: {
-    position: 'absolute',
-    top: '48px',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    color: 'rgba(0,0,0,0.8)',
-    fontFamily: 'Kaushan Script'
+  aboutContent: {
+    textAlign: 'center',
+    color: 'rgba(255,255,255,0.8)'
   },
+  aboutText: {
+    fontWeight: 'lighter'
+  }
 })
-
 

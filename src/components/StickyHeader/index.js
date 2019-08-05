@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { ListItem, List, Typography } from '@material-ui/core';
+import { Grid, Typography, Container } from '@material-ui/core';
 import { Home, Face, Build } from '@material-ui/icons';
 import { Link } from 'react-scroll';
 
@@ -28,26 +28,28 @@ export default function Header() {
   function HeaderContent() {
     return (
       <header className={styles.header} >
-        <List className={styles.nav} >
-          <ListItem>
-            <Link className={styles.navLink} to="intronav" spy={true} smooth={true} duration={500}>
-              <Home />
-              <Typography className={styles.navText} variant="h5">Paul Rizardo</Typography>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
-              <Build />
-              <Typography className={styles.navText} variant="h5">Projects</Typography>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
-              <Face />
-              <Typography className={styles.navText} variant="h5">Profile</Typography>
-            </Link>
-          </ListItem>
-        </List>
+        <Container>
+          <Grid container>
+            <Grid item xs={4} style={{textAlign:'center'}}>
+              <Link className={styles.navLink} to="intronav" spy={true} smooth={true} duration={500}>
+                <Home />
+                <Typography className={styles.navText} variant="h5">Top</Typography>
+              </Link>
+            </Grid>
+            <Grid item xs={4} style={{textAlign:'center'}}>
+              <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
+                <Build />
+                <Typography className={styles.navText} variant="h5">Projects</Typography>
+              </Link>
+            </Grid>
+            <Grid item xs={4} style={{textAlign:'center'}}>
+              <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
+                <Face />
+                <Typography className={styles.navText} variant="h5">About Me</Typography>
+              </Link>
+            </Grid>
+          </Grid>
+        </Container>
       </header> 
     )
   }
@@ -76,6 +78,7 @@ const useStyles = makeStyles({
     color: 'white',
     backgroundColor: 'rgba(0,0,0,0.7)',
     display: 'block',
+    padding: '8px 0',
   },
   nav: {
     display: 'flex',

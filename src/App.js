@@ -5,14 +5,18 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import StickyHeader from './components/StickyHeader';
 
+import { Parallax } from 'react-parallax';
+
 export default function App() {
   return (
-    <div style={{position: 'relative'}}>
-      <StickyHeader />
-      <IntroNav />
-      <Projects /> 
-      <About /> 
-      <Footer />
-    </div>
+    <Parallax bgImage={require('./assets/images/beach_bg.jpg')} strength={1000} >
+      <div style={{position: 'relative'}}>
+        <StickyHeader />
+        <IntroNav />
+        <Projects /> 
+        <About /> 
+        <Footer />
+      </div>
+    </Parallax>
   )
 }

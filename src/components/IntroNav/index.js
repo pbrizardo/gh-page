@@ -1,74 +1,56 @@
 import React from 'react';
-import { Parallax } from 'react-parallax';
+
 import Box from '@material-ui/core/Box';
-import { makeStyles, Typography } from '@material-ui/core';
-import { Element, Link } from 'react-scroll';
+import { makeStyles, Typography, Container, Grid } from '@material-ui/core';
 import { Face, Build } from '@material-ui/icons';
+
+import { Element, Link } from 'react-scroll';
+
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
+import useCommonStyles from '../../styles/common';
+
 export default function Main() {
 
-  const styles = useStyles();
-
+  const styles = {
+    ...useStyles(),
+    ...useCommonStyles()
+  }
+  
   return (
     <Element name="intronav">
-      <Parallax bgImage={require('../../assets/images/beach_bg.jpg')} strength={700} >
-        <div style={{ height: '550px' }}>
-          <Slide left>
-            <Typography className={styles.title} variant="h1">Paul Rizardo</Typography>
-          </Slide>
-          <Slide right>
-            <Typography className={styles.subTitle} variant="h3">Front End Developer</Typography>
-          </Slide>
-          <Box
-            display="flex" 
-            justifyContent="center"
-            alignItems="center"
-            style={{ height: '100%', padding: '16px' }}
-          >
-            <Fade delay={700}>
-              <ul className={styles.navigation}>
-                <li className={styles.navItems}>
-                  <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
-                    <Build className={styles.navIcon} />
-                  </Link>
-                  <Typography className={styles.navLinkText} variant="h3">Projects</Typography>
-                </li>
-                <li className={styles.navItems}>
-                  <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
-                    <Face className={styles.navIcon} />
-                  </Link>
-                  <Typography className={styles.navLinkText} variant="h3">About Me</Typography>
-                </li>
-              </ul>
-            </Fade>
+      <Container className={styles.container}>
+        <Slide left>
+          <Box className={styles.titleContainer}>
+            <Typography className={styles.titleLight} variant="h3">Paul Rizardo</Typography>
+            <Typography className={styles.title} variant="h3">Front End Developer</Typography>
           </Box>
-        </div>
-      </Parallax>
+        </Slide>
+        <Fade delay={700}>
+          <Grid container>
+            <Grid item xs={6} style={{textAlign: 'center'}}>
+              <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
+                <Build className={styles.navIcon} />
+              </Link>
+              <Typography className={styles.navLinkText} variant="h3">Projects</Typography>
+            </Grid>
+            <Grid item xs={6} style={{textAlign: 'center'}}>
+              <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
+                <Face className={styles.navIcon} />
+              </Link>
+              <Typography className={styles.navLinkText} variant="h3">About Me</Typography>
+            </Grid>
+          </Grid>
+        </Fade>
+      </Container>
     </Element>
   )
 }
 
 const useStyles = makeStyles({
-  title: {
-    position: 'absolute',
-    top: '48px',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    color: 'rgba(255,255,255,0.8)',
-    fontFamily: 'Kaushan Script'
-  },
-  subTitle: {
-    position: 'absolute',
-    top: '144px',
-    paddingLeft: '160px',
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center',
-    color: 'rgba(255,255,255,0.8)',
-    fontFamily: 'Kaushan Script'
+  slide: {
+    display: 'inline-block',
   },
   navigation: {
     display: 'flex',
@@ -105,8 +87,8 @@ const useStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     width: '100%',
-    fontFamily: 'Kaushan Script',
     paddingTop: '24px',
+    fontWeight: 'lighter',
     transition: 'opacity 0.5s',
   },
   navIcon: {
