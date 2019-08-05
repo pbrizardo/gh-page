@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/styles';
-import { ListItem, List } from '@material-ui/core';
+import { ListItem, List, Typography } from '@material-ui/core';
 import { Home, Face, Build } from '@material-ui/icons';
 import { Link } from 'react-scroll';
 
@@ -32,16 +32,19 @@ export default function Header() {
           <ListItem>
             <Link className={styles.navLink} to="intronav" spy={true} smooth={true} duration={500}>
               <Home />
+              <Typography className={styles.navText} variant="h5">Paul Rizardo</Typography>
             </Link>
           </ListItem>
           <ListItem>
             <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
               <Build />
+              <Typography className={styles.navText} variant="h5">Projects</Typography>
             </Link>
           </ListItem>
           <ListItem>
             <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
               <Face />
+              <Typography className={styles.navText} variant="h5">Profile</Typography>
             </Link>
           </ListItem>
         </List>
@@ -77,5 +80,13 @@ const useStyles = makeStyles({
   nav: {
     display: 'flex',
     flexDirection: 'row'
+  },
+  navLink: {
+    cursor: 'pointer',
+  },
+  navText: {
+    display: 'inline-block',
+    fontFamily: 'Kaushan Script',
+    marginLeft: '16px',
   }
 })

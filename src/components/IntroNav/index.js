@@ -1,7 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 import Box from '@material-ui/core/Box';
-import { Container, makeStyles, Typography } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import { Element, Link } from 'react-scroll';
 import { Face, Build } from '@material-ui/icons';
 import Fade from 'react-reveal/Fade';
@@ -15,11 +15,12 @@ export default function Main() {
     <Element name="intronav">
       <Parallax bgImage={require('../../assets/images/beach_bg.jpg')} strength={700} >
         <div style={{ height: '550px' }}>
-          <Container>
-            <Slide left>
-              <Typography className={styles.title} variant="h2">Paul Rizardo</Typography>
-            </Slide>
-          </Container>
+          <Slide left>
+            <Typography className={styles.title} variant="h1">Paul Rizardo</Typography>
+          </Slide>
+          <Slide right>
+            <Typography className={styles.subTitle} variant="h3">Front End Developer</Typography>
+          </Slide>
           <Box
             display="flex" 
             justifyContent="center"
@@ -32,11 +33,13 @@ export default function Main() {
                   <Link className={styles.navLink} to="projects" spy={true} smooth={true} duration={500}>
                     <Build className={styles.navIcon} />
                   </Link>
+                  <Typography className={styles.navLinkText} variant="h3">Projects</Typography>
                 </li>
                 <li className={styles.navItems}>
                   <Link className={styles.navLink} to="aboutme" spy={true} smooth={true} duration={500}>
                     <Face className={styles.navIcon} />
                   </Link>
+                  <Typography className={styles.navLinkText} variant="h3">About Me</Typography>
                 </li>
               </ul>
             </Fade>
@@ -50,7 +53,22 @@ export default function Main() {
 const useStyles = makeStyles({
   title: {
     position: 'absolute',
-    top: '64px',
+    top: '48px',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    color: 'rgba(255,255,255,0.8)',
+    fontFamily: 'Kaushan Script'
+  },
+  subTitle: {
+    position: 'absolute',
+    top: '144px',
+    paddingLeft: '160px',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    color: 'rgba(255,255,255,0.8)',
+    fontFamily: 'Kaushan Script'
   },
   navigation: {
     display: 'flex',
@@ -73,7 +91,23 @@ const useStyles = makeStyles({
 
     '&:hover': {
       backgroundColor: 'rgba(0,0,0,0.8)',
+    },
+
+    '&:hover + h3': {
+      opacity: 1
     }
+  },
+  navLinkText: {
+    opacity: 0,
+    color: 'white',
+    position: 'absolute',
+    left: 0,
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    fontFamily: 'Kaushan Script',
+    paddingTop: '24px',
+    transition: 'opacity 0.5s',
   },
   navIcon: {
     fontSize: '88px',
