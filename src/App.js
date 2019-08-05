@@ -2,6 +2,7 @@ import React from 'react';
 import IntroNav from './components/IntroNav';
 import About from './components/About';
 import Projects from './components/Projects';
+import Photography from './components/Photography';
 import Footer from './components/Footer';
 import StickyHeader from './components/StickyHeader';
 
@@ -15,6 +16,7 @@ export default function App() {
         <IntroNav />
         <Projects /> 
         <About /> 
+        <Photography />
         <Footer />
       </div>
     </Parallax>
