@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <Container>
-      <Box className={styles.footerContainer}>
+      <Box padding="0 16px" className={styles.footerContainer}>
         <Typography className={styles.footerText} variant="h6">Built with React and deployed on GitHub Pages</Typography>
       </Box>
     </Container>
