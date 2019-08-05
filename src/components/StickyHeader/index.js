@@ -89,7 +89,7 @@ const useStyles = makeStyles({
   },
   navText: {
     display: 'inline-block',
-    fontFamily: 'Kaushan Script',
     marginLeft: '16px',
+    fontWeight: 'lighter',
   }
 })
